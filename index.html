@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ</title>
+  <style>
+    /* تحميل خط Serto Urhoy */
+    @font-face {
+      font-family: 'Serto Urhoy';
+      src: url('fonts/SyrCOMUrhoy.eot');
+      src: url('fonts/SyrCOMUrhoy.eot?#iefix') format('embedded-opentype'),
+           url('fonts/SyrCOMUrhoy.woff2') format('woff2'),
+           url('fonts/SyrCOMUrhoy.woff') format('woff'),
+           url('fonts/SyrCOMUrhoy.ttf')  format('truetype'),
+           url('fonts/SyrCOMUrhoy.svg#Serto Urhoy') format('svg');
+    }
+
+    /* إعدادات أساسية */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Serto Urhoy', Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      direction: rtl;
+    }
+
+    /* ترويسة الموقع */
+    header {
+      background-color: #4b0b0b; /* لون ماروني داكن يعكس التراث */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.3em;
+    }
+
+    /* شريط التنقل */
+    nav {
+      background-color: #6f1313;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* قسم العرض الرئيسي */
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://i.pinimg.com/236x/95/ee/25/95ee2530d21f58d45139f185f3a0e356.jpg') center/cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(75, 11, 11, 0.6);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .hero p {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+    .hero a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #d4af37;
+      color: #4b0b0b;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* قسم الأزرار الوسطية */
+.cards-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* عرض البطاقات في 3 أعمدة */
+  gap: 20px;
+  justify-content: center;
+  margin: 20px;
+  
+}
+
+.card {
+  background-color: #fff;
+  border: 2px solid #d4af37; /* إطار ذهبي للمسة تراثية */
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.card h3 {
+  font-size: 1.5em;
+  font-family: 'Serto Urhoy', Arial, sans-serif;
+  color: #4b0b0b;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #d4af37;
+  color: #4b0b0b;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ترتيب متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr); /* ترتيب في عمودين فقط */
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: repeat(1, 1fr); /* ترتيب في عمود واحد */
+  }
+}
+
+    /* تذييل الموقع */
+    footer {
+      background-color: #4b0b0b;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    /* استجابة للشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2em;
+      }
+      .hero p {
+        font-size: 1.2em;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+    }
+    h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+  </style>
+</head>
+<body>
+
+  <!-- ترويسة الموقع -->
+  <header>
+    <h1><a href="index.html">ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ</a></h1>
+    <p>ܒܫܶܡ ܐܰܒܳܐ ܘܰܒܪܳܐ ܘܪܽܘܚܳܐ ܕܩܽܘܕܫܳܐ</p>
+  </header>
+  
+  <!-- شريط التنقل -->
+  <nav>
+    <a href="learn.html">ܝܺܠܶܦ ܠܶܫܳܢܳܐ ܣܽܘܪܝܳܝܳܐ</a>
+    <a href="learn.html">تعلّم اللغة السريانية</a>
+  </nav>
+
+  <!-- قسم العرض الرئيسي -->
+  <section class="hero">
+    <div class="content">
+      <h1>ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ</h1>
+      <p>
+        اللغة السريانية هي نبض التاريخ والإيمان. لغة أنشد بها الرهبان القديسون ألحانًا خَلَتْ بهم سكرى هائمين بسر الله. 
+        لغة تُعرِّفنا بهويَّتنا المارونية، وتنعش الإيمان في الألباب، وتعيدنا إلى تاريخ الوادي المقدّس.
+      </p>
+      <a href="learn.html">تعلّم اللغة السريانية</a>
+    </div>
+  </section>
+
+  <!-- قسم الأزرار في الوسط --><!-- قسم البطاقات -->
+<section class="cards-section">
+  <div class="cards-container">
+    <div class="card">
+      <h3>ܟܬܳܒܳܐ ܕܡܰܙܡܽܘܪ̈ܶܐ</h3>
+      <p> كتاب المزامير باللغة السريانية.</p>
+      <a href="psalm.html">إقرأ</a>
+    </div>
+    <div class="card">
+      <h3>ܩܳܠܰܝ̈ ܫܽܘܒܚܳܐ</h3>
+      <p>اكتشف التراتيل السريانية العريقة التي تعكس روحانية الإيمان.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܒܫܶܡ ܐܰܒܳܐ</h3>
+      <p>صلوات مباركة باللغة السريانية لتغذية الروح.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܐܺܝܬ ܠܝ ܬܰܘܝܳܬܳܐ</h3>
+      <p>أهمية التقليد المسيحي الماروني في العبادة والصلوات.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܕܡܽܘܬܳܐ ܘܨܽܘܪܳܬܳܐ</h3>
+      <p>الغوص في الرموز المسيحية المقدسة عبر التاريخ.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܦܽܘܩܕܳܢܳܐ ܕܡܳܪܝܳܐ</h3>
+      <p>تعلم عن التعاليم الروحية العميقة في التقليد السرياني.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܨܽܘܠܳܩܳܐ ܕܬܶܫܒܽܘܚܳܐ</h3>
+      <p>التراتيل والصلوات التي ترفع الإيمان.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܩܽܘܕܫܳܐ ܕܡܳܪܝܳܐ</h3>
+      <p>الغوص في الفلسفة المسيحية وتأملاتها.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܬܳܘܝܳܬܳܐ ܕܪܽܘܚܳܐ</h3>
+      <p>البعد الروحي في الصلاة الفردية والجماعية.</p>
+      <a href="#">المزيد</a>
+    </div>
+    <div class="card">
+      <h3>ܣܰܘܪܘܳܬܳܐ ܕܫܽܘܒܚܳܐ</h3>
+      <p>أهم التسابيح التي تعكس عبادة المؤمنين.</p>
+      <a href="#">المزيد</a>
+    </div>
+  </div>
+</section>
+
+  <!-- تذييل الموقع -->
+  <footer>
+    <p>&copy; 2025 ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ. جميع الحقوق محفوظة</p>
+    </footer>
