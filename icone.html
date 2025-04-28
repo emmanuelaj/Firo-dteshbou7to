@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="syr" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maronite Iconography</title>
+  <!-- ربط ملف الأنماط الخارجي -->
+  <style>
+      
+    /* تحميل خط Serto Urhoy */
+    @font-face {
+      font-family: 'Serto Urhoy';
+      src: url('fonts/SyrCOMUrhoy.eot');
+      src: url('fonts/SyrCOMUrhoy.eot?#iefix') format('embedded-opentype'),
+           url('fonts/SyrCOMUrhoy.woff2') format('woff2'),
+           url('fonts/SyrCOMUrhoy.woff') format('woff'),
+           url('fonts/SyrCOMUrhoy.ttf')  format('truetype'),
+           url('fonts/SyrCOMUrhoy.svg#Serto Urhoy') format('svg');
+    }
+
+    /* إعادة تعيين الهوامش والتوسيط لجميع العناصر */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Marhey', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.5;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      width: 90px;
+      height: 90px;
+    }
+   
+    /* تنسيق العنوان الفرعي المخصص */
+    .sub-heading {
+      font-family: 'mohammad bold art', sans-serif;
+      font-size: 13px;
+      margin: 20px 0;
+      color: brown;
+      display: block;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid black;
+      margin: 20px 0;
+    }
+    /* عنوان القسم */
+    .section-title {
+      text-align: center;
+      font-family: 'Reem Kufi', sans-serif;
+      font-size: 40px;
+      margin: 20px 0;
+    }
+    /* شبكة الصور باستخدام CSS Grid */
+    .grid-container {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 20px;
+    }
+    .grid-container img {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .grid-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    /* زر الانتقال إلى الأعلى */
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      display: none;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      align-items: center;
+      justify-content: center;
+    }
+    /* تنسيق النص المتوسط الخاص بتعبير الترانسليت */
+    .translate-text {
+      font-family: 'Marhey', sans-serif;
+      font-size: 9px;
+      margin: -39px 0px;
+    }
+    
+    
+    header {
+      background-color: #4b0b0b; /* لون ماروني داكن يعكس التراث */
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.3em;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Serto Urhoy', Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      direction: rtl;
+    }
+
+    
+    footer {
+      background-color: #4b0b0b;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    /* استجابة للشاشات الصغيرة */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2em;
+      }
+      .hero p {
+        font-size: 1.2em;
+      }
+      nav a {
+        margin: 0 10px;
+      }
+    }
+    h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero {
+      position: relative;
+      height: 80vh;
+      background: url('https://i.pinimg.com/236x/95/ee/25/95ee2530d21f58d45139f185f3a0e356.jpg') center/cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(75, 11, 11, 0.6);
+    }
+    .hero .content {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3em;
+    }
+    .hero p {
+      font-size: 1.5em;
+      margin: 20px 0;
+    }
+    .hero a {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #d4af37;
+      color: #4b0b0b;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- قسم الهيدر -->
+  <header>
+    <h1><a href="index.html">ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ</a></h1>
+    <p>ܒܫܶܡ ܐܰܒܳܐ ܘܰܒܪܳܐ ܘܪܽܘܚܳܐ ܕܩܽܘܕܫܳܐ</p>
+  </header>
+  
+
+  <!-- قسم صور "من وحي الإنجيل" -->
+  <section>
+    <h1 class="section-title">من وحي الإنجيل</h1>
+    <div class="grid-container">
+      <img src="img/biblical/يسوع.jpg" alt="يسوع">
+      <img src="img/biblical/العذراء.jpg" alt="العذراء">
+      <img src="img/biblical/ولادة العذراء.jpg" alt="ولادة العذراء">
+      <img src="img/biblical/العذراء٢.jpg" alt="العذراء ٢">
+      <img src="img/biblical/تجديد-وتقديس-البيعة.jpg" alt="تجديد وتقديس البيعة">
+      <img src="img/biblical/بشارة-زكريا.jpg" alt="بشارة زكريا">
+      <img src="img/biblical/البشارة.jpg" alt="البشارة">
+      <img src="img/biblical/زيارة مريم.jpg" alt="زيارة مريم">
+      <img src="img/biblical/مولد يوحنا.jpg" alt="مولد يوحنا">
+      <img src="img/biblical/أحد البيان ليوسف.png" alt="أحد البيان ليوسف">
+      <img src="img/biblical/الميلاد.jpg" alt="الميلاد">
+      <img src="img/biblical/شجرة العائلة.jpg" alt="شجرة العائلة">
+      <img src="img/biblical/وجود-الرب-في-الهيكل.jpg" alt="وجود الرب في الهيكل">
+      <img src="img/biblical/رأس السنة.jpg" alt="رأس السنة">
+      <img src="img/biblical/الدنح.jpg" alt="الدنح">
+      <img src="img/biblical/دخول-الرب-إلى-الهيكل.jpg" alt="دخول الرب إلى الهيكل">
+      <img src="img/biblical/آبائنا الكهنة.jpg" alt="آبائنا الكهنة">
+      <img src="img/biblical/الابرار.jpg" alt="الابرار">
+      <img src="img/biblical/الموتى-المؤمنين.jpg" alt="الموتى المؤمنين">
+      <img src="img/biblical/قانا-الجليل.jpg" alt="قانا الجليل">
+      <img src="img/biblical/شفاء-الأبرص.jpg" alt="شفاء الأبرص">
+      <img src="img/biblical/شفاء-المنزوفة.jpg" alt="شفاء المنزوفة">
+      <img src="img/biblical/الإبن-الضال.jpg" alt="الإبن الضال">
+      <img src="img/biblical/شفاء المخلع.jpg" alt="شفاء المخلع">
+      <img src="img/biblical/شفاء-الأعمى.jpg" alt="شفاء الأعمى">
+      <img src="img/biblical/قيامة لعازر.jpg" alt="قيامة لعازر">
+      <img src="img/biblical/الشعانين.jpg" alt="الشعانين">
+      <img src="img/biblical/العشاء-السري.jpg" alt="العشاء السري">
+      <img src="img/biblical/الصلب.jpg" alt="الصلب">
+      <img src="img/biblical/وعد المينا.jpg" alt="وعد المينا">
+      <img src="img/biblical/الوضع-بالقبر.jpg" alt="الوضع بالقبر">
+      <img src="img/biblical/القيامة.jpg" alt="القيامة">
+      <img src="img/biblical/الصعود.jpg" alt="الصعود">
+      <img src="img/biblical/العنصرة.jpg" alt="العنصرة">
+      <img src="img/biblical/الأحد الجديد.jpg" alt="الأحد الجديد">
+      <img src="img/biblical/الثالوث.jpg" alt="الثالوث">
+      <img src="img/biblical/التجلي.jpg" alt="التجلي">
+      <img src="img/biblical/انتقال مريم العذراء.jpg" alt="انتقال مريم العذراء">
+      <img src="img/biblical/ارتفاع الصليب.jpg" alt="ارتفاع الصليب">
+    </div>
+  </section>
+
+  <!-- قسم صور "قديسين" -->
+  <section>
+    <h1 class="section-title">قديسين</h1>
+    <div class="grid-container">
+      <img src="img/saints/الإنجيليين.jpg" alt="الإنجيليين">
+      <img src="img/saints/متى الرسول.jpg" alt="متى الرسول">
+      <img src="img/saints/مرقس البشير.jpg" alt="مرقس البشير">
+      <img src="img/saints/لوقا البشير.jpg" alt="لوقا البشير">
+      <img src="img/saints/يوحنا الرسول.jpg" alt="يوحنا الرسول">
+      <img src="img/saints/بطرس وبولس.jpg" alt="بطرس وبولس">
+      <img src="img/saints/مار برتلماوس.jpg" alt="مار برتلماوس">
+      <img src="img/saints/مار يعقوب اخي الرب.jpg" alt="مار يعقوب اخي الرب">
+      <img src="img/saints/اندراوس.jpeg" alt="اندراوس">
+      <img src="img/saints/مار تداوس.jpg" alt="مار تداوس">
+      <img src="img/saints/مار قبريانوس ويوستينا.jpg" alt="مار قبريانوس ويوستينا">
+      <img src="img/saints/يهوذا.jpg" alt="يهوذا">
+      <img src="img/saints/توما.jpg" alt="توما">
+      <img src="img/saints/توما.jpg" alt="توما">
+      <img src="img/saints/متياس.jpg" alt="متياس">
+      <img src="img/saints/مار يوحنا مارون.jpg" alt="مار يوحنا مارون">
+      <img src="img/saints/مار مارون.jpg" alt="مار مارون">
+      <img src="img/saints/رهبان مار مارون.jpg" alt="رهبان مار مارون">
+      <img src="img/saints/تلميذات مار مارون.jpg" alt="تلميذات مار مارون">
+      <img src="img/saints/مار فرنسيس.jpg" alt="مار فرنسيس">
+      <img src="img/saints/مار يعقوب.jpg" alt="مار يعقوب">
+      <img src="img/saints/مار أفرام.png" alt="مار أفرام">
+      <img src="img/saints/مار أفرام٢.jpg" alt="مار أفرام ٢">
+      <img src="img/saints/مار يوسف.jpg" alt="مار يوسف">
+      <img src="img/saints/مار آشعيا الحلبي.jpg" alt="مار آشعيا الحلبي">
+      <img src="img/saints/مارينا.jpg" alt="مارينا">
+      <img src="img/saints/بطرس وبولس.jpg" alt="بطرس وبولس">
+      <img src="img/saints/مار منصور.jpg" alt="مار منصور">
+      <img src="img/saints/مار ماما.jpg" alt="مار ماما">
+      <img src="img/saints/مار عبدا.jpg" alt="مار عبدا">
+      <img src="img/saints/أكوالينا.jpg" alt="أكوالينا">
+      <img src="img/saints/شموني.jpg" alt="شموني">
+      <img src="img/saints/صوفيا.jpg" alt="صوفيا">
+      <img src="img/saints/ساسين.jpg" alt="ساسين">
+      <img src="img/saints/٣ شهداء مسابكيين.jpg" alt="٣ شهداء مسابكيين">
+      <img src="img/saints/السهداء الاربعين.jpg" alt="السهداء الاربعين">
+      <img src="img/saints/مار الياس.jpg" alt="مار الياس">
+      <img src="img/saints/مار شربل.jpg" alt="مار شربل">
+      <img src="img/saints/القديسة رفقا.jpg" alt="القديسة رفقا">
+      <img src="img/saints/مار إسطفان.jpg" alt="مار إسطفان">
+      <img src="img/saints/القديسة تريزيا.jpeg" alt="القديسة تريزيا">
+      <img src="img/saints/تيموتاوس ومورا.jpg" alt="تيموتاوس ومورا">
+      <img src="img/saints/سركيس وباخوس.jpg" alt="سركيس وباخوس">
+      <img src="img/saints/مار نوهرا.jpg" alt="مار نوهرا">
+      <img src="img/saints/مار ساسين.jpg" alt="مار ساسين">
+      <img src="img/saints/مار قبريانوس ويوستينا.jpg" alt="مار قبريانوس ويوستينا">
+      <img src="img/saints/مار جرجس.jpg" alt="مار جرجس">
+      <img src="img/saints/مار اغناطيوس.jpg" alt="مار اغناطيوس">
+      <img src="img/saints/مار انطونيوس البدواني.jpg" alt="مار انطونيوس البدواني">
+      <img src="img/saints/مارت تقلا.jpg" alt="مارت تقلا">
+      <img src="img/saints/بربارة ويولينا.jpg" alt="بربارة ويولينا">
+      <img src="img/saints/مارت الكسندريا.jpg" alt="مارت الكسندريا">
+    </div>
+  </section>
+  
+  <!-- زر الانتقال إلى الأعلى -->
+  <button id="scrollToTopBtn">&#8679;</button>
+  
+  <script>
+    // وظيفة زر "الانتقال إلى الأعلى"
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    
+    window.onscroll = function() {
+      if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
+          scrollToTopBtn.style.display = "flex";
+      } else {
+          scrollToTopBtn.style.display = "none";
+      }
+    };
+    
+    scrollToTopBtn.addEventListener("click", function(){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+  <footer>
+    <p>&copy; 2025 ܦܺܐܪܳܐ ܕܬܶܫܒܽܘܚܬܳܐ. جميع الحقوق محفوظة</p>
+    </footer>
+ 
+</body>
+</html>
